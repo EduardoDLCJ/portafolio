@@ -1,0 +1,178 @@
+:root {
+  /* Material 3 Light Theme Colors */
+  --md-sys-color-primary: #0061a4;
+  --md-sys-color-on-primary: #ffffff;
+  --md-sys-color-primary-container: #d1e4ff;
+  --md-sys-color-on-primary-container: #001d36;
+  
+  --md-sys-color-secondary: #535f70;
+  --md-sys-color-on-secondary: #ffffff;
+  --md-sys-color-secondary-container: #d7e3f7;
+  --md-sys-color-on-secondary-container: #101c2b;
+  
+  --md-sys-color-tertiary: #6b5778;
+  --md-sys-color-on-tertiary: #ffffff;
+  --md-sys-color-tertiary-container: #f2daff;
+  --md-sys-color-on-tertiary-container: #251431;
+
+  --md-sys-color-surface: #fdfcff;
+  --md-sys-color-on-surface: #1a1c1e;
+  --md-sys-color-on-surface-variant: #43474e;
+  
+  --md-sys-color-surface-container-lowest: #ffffff;
+  --md-sys-color-surface-container-low: #f7f6f9;
+  --md-sys-color-surface-container: #f1f0f4;
+  --md-sys-color-surface-container-high: #ebeaef;
+  --md-sys-color-surface-container-highest: #e2e2e6;
+  
+  --md-sys-color-outline: #73777f;
+  --md-sys-color-outline-variant: #c3c7cf;
+
+  /* Legacy variable mapping to M3 */
+  --bg: var(--md-sys-color-surface);
+  --bg-elevated: var(--md-sys-color-surface-container-low);
+  --bg-subtle: var(--md-sys-color-surface-container);
+  --bg-card: var(--md-sys-color-surface-container-high);
+  --bg-glass: color-mix(in srgb, var(--md-sys-color-surface) 85%, transparent);
+
+  --text: var(--md-sys-color-on-surface-variant);
+  --text-strong: var(--md-sys-color-on-surface);
+  --text-muted: var(--md-sys-color-outline);
+
+  --border: var(--md-sys-color-surface-container-highest);
+  --border-strong: var(--md-sys-color-outline-variant);
+
+  --accent: var(--md-sys-color-primary);
+  --accent-soft: var(--md-sys-color-primary-container);
+  --accent-deep: var(--md-sys-color-primary);
+  --accent-light: var(--md-sys-color-secondary);
+  --accent-muted: var(--md-sys-color-surface-container-highest);
+  --accent-glow: color-mix(in srgb, var(--md-sys-color-primary) 12%, transparent);
+  --chip: var(--md-sys-color-secondary-container);
+
+  --gradient-page: var(--bg);
+  --gradient-accent: var(--accent);
+  --gradient-text: none;
+  --gradient-card: var(--bg-card);
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.12);
+
+  /* Material 3 Radii */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 100px;
+
+  /* Material 3 Typography */
+  --font-body: 'Roboto', system-ui, sans-serif;
+  --font-display: 'Roboto Flex', 'Roboto', system-ui, sans-serif;
+
+  --space-section: clamp(4rem, 8vw, 6rem);
+  --content-width: 720px;
+  --page-width: 960px;
+
+  font: 16px/1.5 var(--font-body);
+  color-scheme: light;
+  color: var(--text);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Material 3 Dark Theme Colors */
+    --md-sys-color-primary: #9ecaeb;
+    --md-sys-color-on-primary: #003258;
+    --md-sys-color-primary-container: #00497d;
+    --md-sys-color-on-primary-container: #d1e4ff;
+    
+    --md-sys-color-secondary: #bbc7db;
+    --md-sys-color-on-secondary: #253140;
+    --md-sys-color-secondary-container: #3b4858;
+    --md-sys-color-on-secondary-container: #d7e3f7;
+    
+    --md-sys-color-tertiary: #d6bee4;
+    --md-sys-color-on-tertiary: #3b2948;
+    --md-sys-color-tertiary-container: #523f5f;
+    --md-sys-color-on-tertiary-container: #f2daff;
+
+    --md-sys-color-surface: #1a1c1e;
+    --md-sys-color-on-surface: #e2e2e6;
+    --md-sys-color-on-surface-variant: #c3c7cf;
+    
+    --md-sys-color-surface-container-lowest: #0f1113;
+    --md-sys-color-surface-container-low: #1a1c1e;
+    --md-sys-color-surface-container: #1e2022;
+    --md-sys-color-surface-container-high: #282a2c;
+    --md-sys-color-surface-container-highest: #333538;
+    
+    --md-sys-color-outline: #8d9199;
+    --md-sys-color-outline-variant: #43474e;
+
+    --bg: var(--md-sys-color-surface);
+    --bg-elevated: var(--md-sys-color-surface-container-low);
+    --bg-subtle: var(--md-sys-color-surface-container);
+    --bg-card: var(--md-sys-color-surface-container-high);
+    --bg-glass: color-mix(in srgb, var(--md-sys-color-surface) 85%, transparent);
+
+    --text: var(--md-sys-color-on-surface-variant);
+    --text-strong: var(--md-sys-color-on-surface);
+    --text-muted: var(--md-sys-color-outline);
+
+    --border: var(--md-sys-color-surface-container-highest);
+    --border-strong: var(--md-sys-color-outline-variant);
+
+    --accent: var(--md-sys-color-primary);
+    --accent-soft: var(--md-sys-color-primary-container);
+    --accent-deep: var(--md-sys-color-primary);
+    --accent-light: var(--md-sys-color-secondary);
+    --accent-muted: var(--md-sys-color-surface-container-highest);
+    --accent-glow: color-mix(in srgb, var(--md-sys-color-primary) 12%, transparent);
+    --chip: var(--md-sys-color-secondary-container);
+
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.2);
+    --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.4);
+
+    color-scheme: dark;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100svh;
+  background: var(--bg);
+}
+
+#root {
+  min-height: 100svh;
+}
+
+a {
+  color: var(--text-strong);
+  text-decoration: underline;
+  text-decoration-color: var(--border-strong);
+  text-underline-offset: 0.2em;
+  transition: color 0.2s, text-decoration-color 0.2s;
+}
+
+a:hover {
+  color: var(--accent-soft);
+  text-decoration-color: var(--text-muted);
+}
+
+:focus-visible {
+  outline: 1px solid var(--text-strong);
+  outline-offset: 3px;
+}
