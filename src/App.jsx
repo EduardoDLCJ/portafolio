@@ -10,9 +10,9 @@ const profile = {
   phoneHref: 'tel:+523329608527',
   email: 'ojjkd27@gmail.com',
   headline:
-    'Egresado de Ingeniería en Desarrollo y Gestión de Software · desarrollo web, móvil e IoT',
+    'Egresado de Ingeniería en Desarrollo y Gestión de Software · especialidad Full Stack web',
   summary:
-    'Experiencia en el desarrollo de aplicaciones web y móviles (Kotlin y React Native) y creación de APIs RESTful. Enfocado en crear soluciones eficientes, escalables y orientadas al usuario.',
+    'Mi especialidad es el desarrollo web full stack: interfaces con React, backends con Node.js y APIs RESTful sobre MySQL, PostgreSQL o MongoDB. Complemento ese enfoque con Java, Kotlin, C#, C++ y PHP en proyectos de escritorio, móvil (React Native) e IoT cuando el contexto lo requiere. Priorizo soluciones eficientes, escalables y orientadas al usuario.',
   education: [
     {
       title: 'Ingeniería en Desarrollo y Gestión de Software',
@@ -530,22 +530,23 @@ function App() {
             >
               <dl className="hero-meta">
                 <div>
-                  <dt>Enfoque</dt>
-                  <dd>Full Stack &amp; APIs RESTful</dd>
+                  <dt>Especialidad</dt>
+                  <dd>Desarrollo web Full Stack</dd>
                 </div>
                 <div>
-                  <dt>Stack habitual</dt>
-                  <dd>React · React Native · Node.js · Kotlin</dd>
+                  <dt>Stack web</dt>
+                  <dd>React · Node.js · APIs REST · SQL / NoSQL</dd>
+                </div>
+                <div>
+                  <dt>También</dt>
+                  <dd>Java · Kotlin · C# · C++ · PHP · React Native</dd>
                 </div>
               </dl>
             </ScrollReveal>
           </div>
         </section>
 
-        <Section id="perfil" title="Perfil profesional">
-          <p className="lead">{profile.summary}</p>
-        </Section>
-
+       
         <Section id="cv" title="Currículum vitae" /*eyebrow="Documento"*/>
           <div className="cv-card">
             <div className="cv-card__badge" aria-hidden="true">
