@@ -25,6 +25,46 @@ const profile = {
       org: 'UTZMG',
     },
   ],
+  developmentProject: {
+    name: 'NetMap',
+    status: 'En desarrollo',
+    stack: 'Flutter · Go · API REST',
+    summary:
+      'Aplicación móvil para consultar las zonas de cobertura de proveedores de internet disponibles alrededor de la ubicación del usuario.',
+    points: [
+      'El usuario puede moverse libremente y consultar en tiempo real la cobertura disponible en cada zona.',
+      'Incluye detector de proveedor y pruebas de velocidad de bajada, subida y latencia (ping).',
+      'La ubicación permite registrar mediciones georreferenciadas y generar promedios de cobertura con datos de la comunidad.',
+      'El proyecto está previsto para crecer con información colaborativa de usuarios y proveedores.',
+    ],
+    gallery: [
+      {
+        src: '/experiences/own/NetMap/1.jpeg',
+        alt: 'Inicio de sesión de NetMap',
+        description: 'Pantalla de inicio de sesión para acceder a NetMap.',
+      },
+      {
+        src: '/experiences/own/NetMap/2.jpg',
+        alt: 'Menú de usuario de NetMap sobre el mapa',
+        description: 'Menú de usuario y mapa de cobertura con controles de ubicación.',
+      },
+      {
+        src: '/experiences/own/NetMap/3.jpg',
+        alt: 'Mapa de cobertura de NetMap',
+        description: 'Mapa con zonas de cobertura cercanas, proveedores y resultados de pruebas.',
+      },
+      {
+        src: '/experiences/own/NetMap/4.jpg',
+        alt: 'Test de velocidad de NetMap',
+        description: 'Test de velocidad con métricas de ping, descarga y subida.',
+      },
+      {
+        src: '/experiences/own/NetMap/5.jpg',
+        alt: 'Términos y referencias de NetMap',
+        description: 'Información sobre permisos de ubicación, privacidad y referencias tecnológicas.',
+      },
+    ],
+  },
   experiences: [
     {
       role: 'Desarrollador Full Stack',
@@ -351,6 +391,7 @@ const navLinks = [
   { id: 'perfil', label: 'Perfil' },
   { id: 'cv', label: 'CV' },
   { id: 'educacion', label: 'Educación' },
+  { id: 'desarrollo', label: 'En desarrollo' },
   { id: 'experiencia', label: 'Experiencia' },
   { id: 'proyectos', label: 'Proyectos' },
   { id: 'competencias', label: 'Competencias' },
@@ -535,11 +576,11 @@ function App() {
                 </div>
                 <div>
                   <dt>Stack web</dt>
-                  <dd>React · Node.js · APIs REST · SQL / NoSQL</dd>
+                  <dd>React · Node.js · APIs REST · SQL / NoSQL, Go</dd>
                 </div>
                 <div>
                   <dt>También</dt>
-                  <dd>Java · Kotlin · C# · C++ · PHP · React Native</dd>
+                  <dd>Java · Kotlin · C# · C++ · PHP · React Native, Flutter</dd>
                 </div>
               </dl>
             </ScrollReveal>
@@ -597,6 +638,34 @@ function App() {
               </ScrollReveal>
             ))}
           </ul>
+        </Section>
+
+        <Section id="desarrollo" title="Proyecto en desarrollo" eyebrow="Proyecto propio">
+          <article className="development-project">
+            <header className="development-project__header">
+              <div>
+                <h3>{profile.developmentProject.name}</h3>
+                <p className="stack">{profile.developmentProject.stack}</p>
+              </div>
+              <span className="pill development-project__status">
+                {profile.developmentProject.status}
+              </span>
+            </header>
+            <p className="development-project__summary">
+              {profile.developmentProject.summary}
+            </p>
+            <ul className="development-project__points">
+              {profile.developmentProject.points.map((point) => (
+                <li key={point}>{point}</li>
+              ))}
+            </ul>
+            <ProjectGallery
+              gallery={profile.developmentProject.gallery}
+              projectName={profile.developmentProject.name}
+              simpleGallery
+              emphasizeCaptures
+            />
+          </article>
         </Section>
 
         <Section
